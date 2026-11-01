@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NEXØ SOUND – Studio d'enregistrement & Label | Record • Mix • Master</title>
+<meta name="description" content="NEXØ SOUND, studio d'enregistrement et label indépendant : enregistrement, mixage, mastering, production et accompagnement artistique. Ton son. Ton identité. Notre signature.">
+<meta name="keywords" content="studio d'enregistrement, label musical, mixage, mastering, enregistrement voix, production musicale, rap, NEXØ SOUND">
+<meta name="theme-color" content="#05010a">
+<meta property="og:title" content="NEXØ SOUND – Studio & Label">
+<meta property="og:description" content="Record • Mix • Master. Ton son. Ton identité. Notre signature.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "NEXØ SOUND",
+  "email": "admin@nexosound.fr",
+  "description": "Studio d'enregistrement et label musical indépendant : enregistrement, mixage, mastering, production.",
+  "slogan": "Record • Mix • Master"
+}
+</script>
+<style>
+:root{
+  --bg:#05010a; --bg2:#0b0414; --card:#0f0719;
+  --violet:#a24bff; --violet-2:#7a1fff; --glow:rgba(162,75,255,.55);
+  --chrome:linear-gradient(180deg,#fff 0%,#d9dbe6 35%,#8d90a3 55%,#e9eaf2 75%,#9a9db0 100%);
+  --text:#e9e6f2; --muted:#9b94b0;
+  --font-title:'Orbitron',sans-serif; --font-body:'Inter',sans-serif;
+  --pad:clamp(64px,10vw,110px);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.6;overflow-x:hidden;padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+body.lock{overflow:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.chrome-text{background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
+.container{width:min(1180px,92%);margin:0 auto}
+section{padding:var(--pad) 0;position:relative}
+.eyebrow{font-family:var(--font-title);font-size:clamp(.62rem,1.6vw,.75rem);letter-spacing:.4em;color:var(--violet);text-transform:uppercase;margin-bottom:14px;text-shadow:0 0 12px var(--glow)}
+h2.title{font-family:var(--font-title);font-weight:900;font-size:clamp(1.7rem,5vw,3.2rem);letter-spacing:.04em;line-height:1.12;margin-bottom:18px;overflow-wrap:anywhere}
+.lead{color:var(--muted);max-width:640px}
+.section-head{margin-bottom:clamp(34px,6vw,56px)}
+
+/* Preloader / progress / glow */
+#loader{position:fixed;inset:0;z-index:999;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;transition:opacity .6s,visibility .6s}
+#loader.done{opacity:0;visibility:hidden}
+#loader .lg{font-family:var(--font-title);font-weight:900;font-size:clamp(1.4rem,6vw,2.4rem);letter-spacing:.14em}
+#loader .bars{display:flex;gap:5px;align-items:flex-end;height:36px}
+#loader .bars i{width:5px;background:var(--violet);box-shadow:0 0 10px var(--glow);border-radius:3px;animation:bar .7s ease-in-out infinite alternate}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--violet-2),#d9b6ff);box-shadow:0 0 12px var(--violet);z-index:200}
+#cursorGlow{position:fixed;left:0;top:0;width:340px;height:340px;margin:-170px 0 0 -170px;border-radius:50%;background:radial-gradient(circle,rgba(162,75,255,.16),transparent 65%);pointer-events:none;z-index:1;opacity:0;transition:opacity .4s;will-change:transform}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font-title);font-weight:700;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;padding:16px 30px;min-height:48px;border-radius:4px;border:1px solid var(--violet);cursor:pointer;transition:.35s;position:relative;overflow:hidden;color:#fff;background:transparent;text-align:center}
+.btn-primary{background:linear-gradient(135deg,var(--violet-2),var(--violet));box-shadow:0 0 22px var(--glow),inset 0 0 12px rgba(255,255,255,.15)}
+.btn::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);transition:.7s}
+.btn:disabled{opacity:.6;cursor:wait}
+@media(hover:hover){
+  .btn-primary:hover{box-shadow:0 0 38px var(--violet),0 0 70px var(--glow);transform:translateY(-2px)}
+  .btn-ghost:hover{background:rgba(162,75,255,.15);box-shadow:0 0 26px var(--glow);transform:translateY(-2px)}
+  .btn:hover::after{left:140%}
+}
+.btn:active{transform:scale(.97)}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;width:100%;z-index:100;padding:16px 0;padding-top:max(16px,env(safe-area-inset-top));transition:.4s}
+nav.scrolled{background:rgba(5,1,10,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(162,75,255,.25);padding-top:max(10px,env(safe-area-inset-top));padding-bottom:10px}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-family:var(--font-title);font-weight:900;font-size:clamp(1.05rem,3.4vw,1.35rem);letter-spacing:.14em;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.logo .dot{width:10px;height:10px;border-radius:50%;background:var(--violet);box-shadow:0 0 14px var(--violet);flex:none}
+.nav-links{display:flex;gap:clamp(14px,2vw,28px);list-style:none}
+.nav-links a{font-family:var(--font-title);font-size:.68rem;letter-spacing:.18em;color:#cfc9e0;position:relative;padding:6px 0;transition:.3s;display:inline-block}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--violet);box-shadow:0 0 10px var(--violet);transition:.3s}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta{padding:12px 18px;font-size:.64rem;white-space:nowrap}
+.burger{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;position:relative;z-index:120}
+.burger span{position:absolute;left:9px;width:26px;height:2px;background:#fff;transition:.3s}
+.burger span:nth-child(1){top:14px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:28px}
+.burger.open span:nth-child(1){top:21px;transform:rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){top:21px;transform:rotate(-45deg)}
+
+/* Hero */
+#accueil{min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:clamp(110px,16vh,150px) 0 clamp(80px,12vh,110px);overflow:hidden;
+  background:
+   radial-gradient(ellipse 60% 50% at 50% 0%,rgba(162,75,255,.35),transparent 70%),
+   radial-gradient(ellipse 40% 40% at 15% 80%,rgba(122,31,255,.25),transparent 70%),
+   radial-gradient(ellipse 40% 40% at 85% 75%,rgba(162,75,255,.2),transparent 70%),
+   linear-gradient(180deg,#0a0312,#05010a)}
+.beams{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.beam{position:absolute;top:-20%;width:180px;height:140%;background:linear-gradient(180deg,rgba(162,75,255,.35),transparent 80%);filter:blur(30px);transform-origin:top center;animation:sway 9s ease-in-out infinite alternate}
+.beam:nth-child(1){left:10%;transform:rotate(18deg)}
+.beam:nth-child(2){left:42%;animation-delay:-3s;transform:rotate(-6deg);opacity:.7}
+.beam:nth-child(3){right:12%;animation-delay:-6s;transform:rotate(-20deg)}
+@keyframes sway{to{transform:rotate(4deg);opacity:.45}}
+.grid-floor{position:absolute;bottom:0;left:0;width:100%;height:42%;background:
+   linear-gradient(transparent,rgba(5,1,10,.9)),
+   repeating-linear-gradient(90deg,rgba(162,75,255,.25) 0 1px,transparent 1px 70px),
+   repeating-linear-gradient(0deg,rgba(162,75,255,.2) 0 1px,transparent 1px 50px);
+  transform:perspective(500px) rotateX(62deg);transform-origin:bottom;opacity:.55;-webkit-mask-image:linear-gradient(transparent,#000 40%);mask-image:linear-gradient(transparent,#000 40%)}
+#particles{position:absolute;inset:0;width:100%;height:100%}
+.hero-in{position:relative;z-index:2}
+.hero-title{font-family:var(--font-title);font-weight:900;font-size:clamp(2.3rem,10.5vw,8rem);letter-spacing:.05em;line-height:1.02;filter:drop-shadow(0 0 28px rgba(162,75,255,.55))}
+.hero-title .o{color:var(--violet);-webkit-text-fill-color:var(--violet);text-shadow:0 0 30px var(--violet)}
+.sub-chrome{font-family:var(--font-title);font-weight:500;font-size:clamp(.7rem,2.4vw,1.35rem);letter-spacing:.3em;margin-top:24px;line-height:1.6}
+.tagline{font-family:var(--font-title);font-size:clamp(.72rem,1.8vw,1rem);letter-spacing:.45em;color:var(--violet);margin:18px 0 36px;text-shadow:0 0 14px var(--glow)}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.eq{display:flex;align-items:flex-end;justify-content:center;gap:5px;height:clamp(50px,9vw,80px);margin:clamp(34px,7vw,60px) auto 0;overflow:hidden}
+.eq i,#loader .bars i{display:block}
+.eq i{width:6px;height:10%;background:linear-gradient(180deg,#d9b6ff,var(--violet-2));border-radius:3px;box-shadow:0 0 10px var(--glow);animation:bar 1.1s ease-in-out infinite alternate}
+@keyframes bar{0%{height:8%}100%{height:100%}}
+.scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);width:24px;height:40px;border:2px solid rgba(255,255,255,.4);border-radius:14px;z-index:2}
+.scroll-hint::after{content:"";position:absolute;top:7px;left:50%;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--violet);animation:scr 1.6s infinite}
+@keyframes scr{to{transform:translateY(14px);opacity:0}}
+
+/* Services */
+#services{background:var(--bg2)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:20px}
+.service{background:linear-gradient(160deg,#150a24,#0b0414);border:1px solid rgba(162,75,255,.18);border-radius:10px;padding:34px 24px;transition:.4s;position:relative;overflow:hidden}
+.service::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(162,75,255,.35),transparent 65%);opacity:0;transition:.4s}
+.service>*{position:relative}
+@media(hover:hover){
+  .service:hover{border-color:var(--violet);box-shadow:0 0 34px var(--glow),inset 0 0 30px rgba(162,75,255,.12);transform:translateY(-8px)}
+  .service:hover::before{opacity:1}
+}
+.service:active{border-color:var(--violet);box-shadow:0 0 30px var(--glow)}
+.icon{width:54px;height:54px;margin-bottom:20px;stroke:var(--violet);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 8px var(--glow))}
+.service h3{font-family:var(--font-title);font-size:.92rem;letter-spacing:.12em;margin-bottom:12px;overflow-wrap:anywhere}
+.service p{color:var(--muted);font-size:.92rem}
+
+/* Label */
+#label{background:radial-gradient(ellipse 50% 60% at 80% 50%,rgba(162,75,255,.18),transparent 70%),var(--bg)}
+.label-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,60px);align-items:center}
+.quote{font-size:clamp(1rem,2.4vw,1.2rem);font-weight:300;color:#ddd6ee;border-left:3px solid var(--violet);padding-left:22px;margin:26px 0;box-shadow:-8px 0 24px -12px var(--glow)}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pillar{padding:24px 18px;border:1px solid rgba(162,75,255,.2);border-radius:8px;background:rgba(15,7,25,.8);transition:.35s}
+@media(hover:hover){.pillar:hover{border-color:var(--violet);box-shadow:0 0 24px var(--glow)}}
+.pillar b{display:block;font-family:var(--font-title);font-size:1.5rem;color:var(--violet);text-shadow:0 0 14px var(--glow);margin-bottom:8px}
+.pillar span{font-size:.9rem;color:#d4cde6}
+
+/* Prods (lecteur d'extraits) */
+#prods{background:var(--bg2)}
+.tracks{display:grid;gap:16px;max-width:860px;margin:0 auto}
+.track{display:flex;align-items:center;gap:clamp(14px,3vw,24px);padding:clamp(16px,3vw,24px);border:1px solid rgba(162,75,255,.2);border-radius:12px;background:linear-gradient(160deg,#150a24,#0b0414);transition:border-color .4s,box-shadow .4s}
+.track.playing{border-color:var(--violet);box-shadow:0 0 34px var(--glow)}
+@media(hover:hover){.track:hover{border-color:var(--violet);box-shadow:0 0 24px rgba(162,75,255,.35)}}
+.tplay{flex:none;width:clamp(52px,9vw,64px);height:clamp(52px,9vw,64px);border-radius:50%;border:1px solid var(--violet);background:linear-gradient(135deg,var(--violet-2),var(--violet));box-shadow:0 0 22px var(--glow);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.3s}
+@media(hover:hover){.tplay:hover{box-shadow:0 0 38px var(--violet);transform:scale(1.06)}}
+.tplay:active{transform:scale(.94)}
+.tplay .ico{width:0;height:0;border-style:solid;border-width:9px 0 9px 15px;border-color:transparent transparent transparent #fff;margin-left:4px}
+.track.playing .tplay .ico{width:15px;height:18px;border:0;border-left:5px solid #fff;border-right:5px solid #fff;margin:0}
+.tbody{flex:1;min-width:0}
+.tmeta{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.tmeta h3{font-family:var(--font-title);font-size:clamp(.85rem,2.6vw,1rem);letter-spacing:.14em;overflow-wrap:anywhere}
+.badge{font-family:var(--font-title);font-size:.55rem;letter-spacing:.2em;color:var(--violet);border:1px solid rgba(162,75,255,.5);border-radius:20px;padding:3px 10px}
+.tbar{position:relative;height:6px;margin:16px 0 8px;border-radius:3px;background:rgba(255,255,255,.12);cursor:pointer}
+.tbar::after{content:"";position:absolute;inset:-14px 0}
+.tbar:focus-visible{outline:2px solid var(--violet);outline-offset:6px}
+.tbar i{display:block;height:100%;width:0;border-radius:3px;background:linear-gradient(90deg,var(--violet-2),#d9b6ff);box-shadow:0 0 10px var(--glow);pointer-events:none}
+.ttime{display:flex;justify-content:space-between;font-size:.75rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.teq{flex:none;display:flex;align-items:flex-end;gap:3px;height:36px}
+.teq i{display:block;width:3px;height:18%;border-radius:2px;background:var(--violet);opacity:.4}
+.track.playing .teq i{opacity:1;box-shadow:0 0 8px var(--glow);animation:bar .8s ease-in-out infinite alternate}
+.teq i:nth-child(2n){animation-duration:.55s!important}.teq i:nth-child(3n){animation-duration:1.05s!important}.teq i:nth-child(4n){animation-delay:-.3s}
+@media(max-width:560px){.teq{display:none}}
+
+/* Process */
+#processus{background:var(--bg)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:20px;counter-reset:s;position:relative}
+.step{position:relative;padding:34px 24px 28px;border:1px solid rgba(162,75,255,.2);border-radius:10px;background:linear-gradient(170deg,#150a24,#09030f);transition:.4s}
+.step .num{font-family:var(--font-title);font-weight:900;font-size:2.6rem;line-height:1;margin-bottom:14px;background:linear-gradient(180deg,#d9b6ff,var(--violet-2));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 12px var(--glow))}
+.step h3{font-family:var(--font-title);font-size:.9rem;letter-spacing:.14em;margin-bottom:10px}
+.step p{color:var(--muted);font-size:.92rem}
+@media(hover:hover){.step:hover{border-color:var(--violet);box-shadow:0 0 30px var(--glow);transform:translateY(-6px)}}
+
+/* Tarifs */
+.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:20px}
+.price{padding:32px 22px;border-radius:12px;border:1px solid rgba(162,75,255,.2);background:linear-gradient(170deg,#150a24,#09030f);text-align:center;transition:.4s;display:flex;flex-direction:column}
+@media(hover:hover){.price:hover{border-color:var(--violet);box-shadow:0 0 34px var(--glow);transform:translateY(-8px)}}
+.price.featured{border-color:var(--violet);box-shadow:0 0 30px rgba(162,75,255,.35);position:relative}
+.price.featured::before{content:"RECOMMANDÉ";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--violet);font-family:var(--font-title);font-size:.58rem;letter-spacing:.2em;padding:4px 12px;border-radius:20px;box-shadow:0 0 16px var(--glow);white-space:nowrap}
+.price h3{font-family:var(--font-title);font-size:.82rem;letter-spacing:.12em;margin-bottom:18px;overflow-wrap:anywhere}
+.price .amount{font-family:var(--font-title);font-weight:900;font-size:1.2rem;letter-spacing:.1em;color:var(--violet);text-shadow:0 0 16px var(--glow);margin-bottom:14px}
+.price p{color:var(--muted);font-size:.88rem;margin-bottom:24px;flex:1}
+.price .btn{padding:13px 14px;font-size:.62rem}
+
+/* FAQ */
+#faq{background:var(--bg2)}
+.faq{max-width:820px;margin:0 auto}
+.qa{border:1px solid rgba(162,75,255,.2);border-radius:10px;background:rgba(15,7,25,.8);margin-bottom:12px;overflow:hidden;transition:border-color .3s,box-shadow .3s}
+.qa.open{border-color:var(--violet);box-shadow:0 0 24px rgba(162,75,255,.25)}
+.qa button{width:100%;background:none;border:0;color:#fff;text-align:left;font:inherit;font-weight:500;padding:18px 20px;min-height:56px;display:flex;justify-content:space-between;align-items:center;gap:16px;cursor:pointer}
+.qa button::after{content:"+";font-family:var(--font-title);font-size:1.4rem;color:var(--violet);transition:transform .3s;flex:none}
+.qa.open button::after{transform:rotate(45deg)}
+.qa .ans{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.qa .ans p{padding:0 20px 20px;color:var(--muted);font-size:.95rem}
+
+/* Contact */
+#contact{background:radial-gradient(ellipse 60% 50% at 20% 50%,rgba(162,75,255,.18),transparent 70%),var(--bg)}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,5vw,56px)}
+.info a.row{display:flex;align-items:center;gap:14px;margin-top:14px;color:#d8d1ea;transition:.3s;min-height:44px;overflow-wrap:anywhere}
+@media(hover:hover){.info a.row:hover{color:#fff;text-shadow:0 0 12px var(--violet)}}
+.info .ic{width:42px;height:42px;border:1px solid rgba(162,75,255,.5);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-title);font-size:.62rem;color:var(--violet);flex:none}
+form{background:rgba(15,7,25,.85);border:1px solid rgba(162,75,255,.25);border-radius:12px;padding:clamp(20px,4vw,34px);box-shadow:0 0 40px rgba(162,75,255,.1)}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:flex;flex-direction:column;gap:7px;min-width:0}
+.field.full{grid-column:1/-1}
+label{font-family:var(--font-title);font-size:.62rem;letter-spacing:.18em;color:#b8b0cf}
+input,select,textarea{width:100%;min-height:48px;background:#07020d;border:1px solid rgba(162,75,255,.25);border-radius:5px;color:#fff;padding:13px 14px;font:inherit;font-size:16px;transition:.3s;-webkit-appearance:none;appearance:none}
+select{background-image:linear-gradient(45deg,transparent 50%,var(--violet) 50%),linear-gradient(135deg,var(--violet) 50%,transparent 50%);background-position:calc(100% - 20px) 21px,calc(100% - 14px) 21px;background-size:6px 6px;background-repeat:no-repeat;padding-right:36px}
+input[type=date]{color-scheme:dark}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--violet);box-shadow:0 0 18px var(--glow)}
+input.bad,select.bad,textarea.bad{border-color:#ff5c8a;box-shadow:0 0 12px rgba(255,92,138,.35)}
+textarea{min-height:130px;resize:vertical}
+select option{background:#0b0414}
+.counter{font-size:.72rem;color:var(--muted);text-align:right}
+.hp{position:absolute;left:-9999px}
+form .btn{width:100%;margin-top:22px}
+.confirm{display:none;text-align:center;padding:40px 10px}
+.confirm.show{display:block;animation:fade .6s}
+.confirm .check{width:70px;height:70px;margin:0 auto 20px;border-radius:50%;border:2px solid var(--violet);display:flex;align-items:center;justify-content:center;font-size:2rem;color:var(--violet);box-shadow:0 0 30px var(--glow)}
+.confirm h3{font-family:var(--font-title);letter-spacing:.14em;margin-bottom:10px}
+.confirm .again{margin-top:22px;width:auto}
+.err{color:#ff7aa8;font-size:.85rem;margin-top:12px;display:none}
+
+/* Footer */
+footer{padding:64px 0 34px;text-align:center;border-top:1px solid rgba(162,75,255,.25);background:#030006;position:relative}
+footer::before{content:"";position:absolute;top:-1px;left:20%;width:60%;height:1px;background:linear-gradient(90deg,transparent,var(--violet),transparent);box-shadow:0 0 20px var(--violet)}
+footer .logo{justify-content:center;font-size:clamp(1.3rem,5vw,1.8rem);margin-bottom:14px}
+footer .rmm{font-family:var(--font-title);letter-spacing:.35em;font-size:.72rem;color:var(--violet);margin-bottom:12px}
+footer .sig{font-style:italic;color:var(--muted);margin-bottom:22px}
+.fnav{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:center;margin-bottom:22px;font-family:var(--font-title);font-size:.62rem;letter-spacing:.18em;color:#bdb5d4}
+.fnav a{padding:8px 4px}
+.fnav a:hover{color:#fff}
+.legal{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+.legal button{background:none;border:0;color:inherit;font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:4px;padding:8px}
+.legal button:hover{color:#fff}
+.copy{margin-top:18px;font-size:.75rem;color:#5f587a}
+
+/* Back to top + mobile CTA */
+#toTop{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));width:48px;height:48px;border-radius:50%;border:1px solid var(--violet);background:rgba(5,1,10,.85);color:#fff;font-size:1.2rem;cursor:pointer;z-index:90;box-shadow:0 0 18px var(--glow);opacity:0;visibility:hidden;transform:translateY(14px);transition:.4s}
+#toTop.show{opacity:1;visibility:visible;transform:none}
+#stickyCta{display:none}
+
+/* Modal */
+dialog{margin:auto;max-width:640px;width:92%;max-height:88vh;overflow:auto;background:#0b0414;color:var(--text);border:1px solid var(--violet);border-radius:12px;padding:clamp(22px,4vw,34px);box-shadow:0 0 60px var(--glow)}
+dialog::backdrop{background:rgba(0,0,0,.75);backdrop-filter:blur(4px)}
+dialog h3{font-family:var(--font-title);letter-spacing:.1em;margin-bottom:16px;font-size:1rem}
+dialog p{color:#c7bfdb;font-size:.9rem;margin-bottom:12px}
+dialog .btn{margin-top:14px;padding:12px 22px}
+
+/* Reveal */
+.js .reveal{opacity:0;transform:translateY(36px);transition:opacity .9s ease,transform .9s ease}
+.js .reveal.in{opacity:1;transform:none}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+.qa .ans p{white-space:pre-line}
+
+/* ========== Espace admin ========== */
+[hidden]{display:none!important}
+#loginPage{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:20px;overflow:auto;
+  background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(162,75,255,.35),transparent 70%),radial-gradient(ellipse 50% 40% at 80% 90%,rgba(122,31,255,.25),transparent 70%),#05010a}
+#loginPage.open{display:flex;animation:fade .5s}
+.lp-card{width:min(420px,100%);text-align:center;margin:auto;box-shadow:0 0 60px rgba(162,75,255,.25)}
+.lp-card .logo{justify-content:center;font-size:1.5rem;margin-bottom:6px}
+.lp-card h2{font-family:var(--font-title);letter-spacing:.2em;font-size:.85rem;color:var(--violet);margin:6px 0 10px;text-shadow:0 0 12px var(--glow)}
+.lp-card p.sub{color:var(--muted);font-size:.9rem;margin-bottom:22px}
+.lp-card .field{text-align:left;margin-bottom:16px}
+.pw{position:relative}
+.pw input{padding-right:52px}
+.pw button{position:absolute;right:2px;top:0;height:100%;width:48px;background:none;border:0;color:#cfc9e0;cursor:pointer;font-size:1.1rem}
+.lp-card .back{background:none;border:0;color:var(--muted);font:inherit;font-size:.85rem;margin-top:18px;cursor:pointer;padding:8px}
+.lp-card .back:hover{color:#fff}
+
+#adminBar{position:fixed;left:50%;bottom:max(14px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:300;display:flex;align-items:center;gap:8px;padding:8px 10px;background:rgba(10,3,18,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--violet);border-radius:40px;box-shadow:0 0 30px var(--glow);max-width:calc(100% - 20px);overflow-x:auto}
+#adminBar button{font-family:var(--font-title);font-size:.62rem;letter-spacing:.12em;color:#fff;background:transparent;border:1px solid rgba(162,75,255,.5);border-radius:30px;padding:10px 14px;min-height:40px;cursor:pointer;white-space:nowrap;transition:.25s}
+#adminBar button:hover,#adminBar button.on{background:var(--violet);box-shadow:0 0 16px var(--glow)}
+#adminBar .ab-tag{font-family:var(--font-title);font-size:.6rem;letter-spacing:.2em;color:var(--violet);padding:0 6px;white-space:nowrap}
+#abStatus{font-size:.72rem;color:var(--muted);white-space:nowrap;padding:0 6px}
+@media(max-width:700px){#abStatus,#adminBar .ab-tag{display:none}}
+body.admin-on #stickyCta{display:none!important}
+body.admin-on #toTop{bottom:calc(84px + env(safe-area-inset-bottom))}
+body.admin-on footer{padding-bottom:110px}
+
+body.editing [data-ek]{outline:1px dashed rgba(162,75,255,.55);outline-offset:4px;cursor:text;transition:outline-color .2s,background .2s;caret-color:#fff}
+body.editing [data-ek]:hover{outline-color:#d9b6ff;background:rgba(162,75,255,.08)}
+body.editing [data-ek]:focus{outline:2px solid var(--violet);box-shadow:0 0 18px var(--glow)}
+
+#adminPanel{position:fixed;top:0;right:0;height:100vh;height:100dvh;width:min(440px,100%);z-index:320;background:#0b0414;border-left:1px solid var(--violet);box-shadow:-20px 0 60px rgba(0,0,0,.7);transform:translateX(105%);transition:transform .4s;overflow-y:auto;padding:24px 22px 40px;visibility:hidden}
+#adminPanel.open{transform:none;visibility:visible}
+#adminPanel h3{font-family:var(--font-title);font-size:.78rem;letter-spacing:.18em;color:var(--violet);margin:28px 0 12px}
+#adminPanel .ph{display:flex;justify-content:space-between;align-items:center;gap:10px}
+#adminPanel .ph h3{margin:0}
+#adminPanel .field{margin-bottom:12px}
+#adminPanel .hint{font-size:.82rem;color:var(--muted);margin:10px 0}
+#adminPanel .btn{width:100%}
+.chk{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:.85rem;cursor:pointer;color:var(--text);font-family:var(--font-body);letter-spacing:0}
+.chk input{-webkit-appearance:checkbox;appearance:auto;accent-color:var(--violet);width:18px;height:18px;min-height:0}
+.fq{border:1px solid rgba(162,75,255,.25);border-radius:8px;padding:12px;margin-bottom:12px;display:grid;gap:8px}
+.fq textarea{min-height:90px}
+.mini{font-family:var(--font-title);font-size:.58rem;letter-spacing:.14em;color:#fff;background:transparent;border:1px solid rgba(162,75,255,.5);border-radius:4px;padding:8px 12px;cursor:pointer;min-height:36px;transition:.25s}
+.mini:hover{background:var(--violet)}
+.mini.danger:hover{background:#ff5c8a;border-color:#ff5c8a}
+#toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,20px);z-index:330;max-width:min(92%,460px);background:rgba(15,7,25,.97);border:1px solid var(--violet);border-radius:10px;padding:12px 18px;font-size:.88rem;box-shadow:0 0 30px var(--glow);opacity:0;pointer-events:none;transition:.4s;text-align:center}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ========== Responsive ========== */
+@media(max-width:1180px){.nav-cta.desk{display:none}}
+@media(max-width:1020px){
+  .burger{display:block}
+  .nav-links{position:fixed;top:0;right:-110%;width:min(340px,82%);height:100vh;height:100dvh;flex-direction:column;justify-content:center;align-items:center;gap:30px;background:rgba(5,1,10,.98);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-left:1px solid var(--violet);transition:right .45s;z-index:110}
+  .nav-links.open{right:0;box-shadow:-20px 0 60px rgba(0,0,0,.7)}
+  .nav-links a{font-size:.9rem;padding:8px 14px}
+  .label-grid,.contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .fgrid{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr 1fr}
+  .hero-btns .btn{width:100%;max-width:340px}
+  .sub-chrome{letter-spacing:.18em}
+  .tagline{letter-spacing:.3em}
+  .eq{gap:3px}.eq i{width:4px}
+  .eq i:nth-child(n+30){display:none}
+  .beam{width:110px}
+  .scroll-hint{display:none}
+  #stickyCta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:95;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:linear-gradient(transparent,rgba(5,1,10,.95) 35%);transform:translateY(120%);transition:transform .4s;pointer-events:none}
+  #stickyCta.show{transform:none}
+  #stickyCta .btn{width:100%;pointer-events:auto}
+  #toTop{bottom:calc(76px + env(safe-area-inset-bottom))}
+  footer{padding-bottom:90px}
+}
+@media(max-width:480px){
+  .hero-title span.w{display:block}
+  .pillars{grid-template-columns:1fr}
+  .quote{padding-left:16px}
+}
+@media(max-height:520px) and (orientation:landscape){
+  #accueil{min-height:auto;padding:100px 0 60px}
+  .scroll-hint,.eq{display:none}
+}
+@media(min-width:1600px){html{font-size:112%}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.js .reveal{opacity:1;transform:none}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<div id="loader" aria-hidden="true">
+  <div class="lg chrome-text">NEXØ SOUND</div>
+  <div class="bars"><i style="height:30%"></i><i style="height:80%;animation-delay:-.2s"></i><i style="height:50%;animation-delay:-.4s"></i><i style="height:100%;animation-delay:-.1s"></i><i style="height:40%;animation-delay:-.3s"></i></div>
+</div>
+<div id="progress"></div>
+<div id="cursorGlow"></div>
+
+<!-- NAVIGATION -->
+<nav id="nav">
+  <div class="container nav-in">
+    <a href="#accueil" class="logo chrome-text" aria-label="NEXØ SOUND – accueil"><span class="dot"></span>NEXØ SOUND</a>
+    <ul class="nav-links" id="menu">
+      <li><a href="#accueil">ACCUEIL</a></li>
+      <li><a href="#services">SERVICES</a></li>
+      <li><a href="#label">LABEL</a></li>
+      <li><a href="#prods">PRODS</a></li>
+      <li><a href="#processus">PROCESSUS</a></li>
+      <li><a href="#tarifs">TARIFS</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-primary nav-cta desk">RÉSERVER UNE SESSION</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<main>
+<!-- HERO -->
+<section id="accueil" class="hero">
+  <div class="beams"><div class="beam"></div><div class="beam"></div><div class="beam"></div></div>
+  <canvas id="particles"></canvas>
+  <div class="grid-floor"></div>
+  <div class="container hero-in">
+    <h1 class="hero-title chrome-text"><span class="w">NEX<span class="o">Ø</span></span> <span class="w">SOUND</span></h1>
+    <p class="sub-chrome chrome-text">TON SON. TON IDENTITÉ. NOTRE SIGNATURE.</p>
+    <p class="tagline">RECORD • MIX • MASTER</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn btn-primary">RÉSERVER UNE SESSION</a>
+      <a href="#services" class="btn btn-ghost">DÉCOUVRIR NOS SERVICES</a>
+    </div>
+    <div class="eq" id="eq" aria-hidden="true"></div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"></div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Ce que nous faisons</div>
+      <h2 class="title chrome-text">NOS SERVICES</h2>
+      <p class="lead">De la première prise à la version finale, chaque étape est travaillée avec précision pour sublimer ta musique.</p>
+    </div>
+    <div class="cards">
+      <article class="service reveal">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4M8 22h8"/></svg>
+        <h3>ENREGISTREMENT</h3><p>Prise de voix pour chanteurs et rappeurs.</p>
+      </article>
+      <article class="service reveal">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+        <h3>MIXAGE</h3><p>Traitement et équilibre professionnel des voix et instruments.</p>
+      </article>
+      <article class="service reveal">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M12 3a9 9 0 0 1 9 9"/></svg>
+        <h3>MASTERING</h3><p>Finalisation audio pour les plateformes de streaming.</p>
+      </article>
+      <article class="service reveal">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        <h3>PRODUCTION</h3><p>Création et accompagnement musical.</p>
+      </article>
+      <article class="service reveal">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+        <h3>ACCOMPAGNEMENT ARTISTIQUE</h3><p>Développement des projets et de l'identité des artistes.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- LABEL -->
+<section id="label">
+  <div class="container label-grid">
+    <div class="reveal">
+      <div class="eyebrow">Studio & Label indépendant</div>
+      <h2 class="title chrome-text">LE LABEL<br>NEXØ SOUND</h2>
+      <p class="lead">NEXØ SOUND est un studio et label indépendant qui accompagne les artistes dans leurs projets musicaux.</p>
+      <blockquote class="quote">« Nous accompagnons les artistes de la première prise de voix jusqu'à la sortie officielle de leurs morceaux. Notre objectif : donner vie à leur univers musical et leur permettre de faire entendre leur identité. »</blockquote>
+    </div>
+    <div class="pillars reveal">
+      <div class="pillar"><b>01</b><span>Accompagnement artistique</span></div>
+      <div class="pillar"><b>02</b><span>Préparation des singles et EP</span></div>
+      <div class="pillar"><b>03</b><span>Distribution musicale</span></div>
+      <div class="pillar"><b>04</b><span>Développement de l'image artistique</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODS : extraits à écouter (fichiers dans le dossier audio/) -->
+<section id="prods">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Nos réalisations</div>
+      <h2 class="title chrome-text">NOS PRODS</h2>
+      <p class="lead">Écoute un extrait de nos productions. D'autres sons arrivent bientôt.</p>
+    </div>
+    <div class="tracks">
+      <article class="track reveal" data-src="audio/frontman.mp3">
+        <button class="tplay" type="button" aria-label="Écouter l'extrait"><span class="ico"></span></button>
+        <div class="tbody">
+          <div class="tmeta"><h3>FRONTMAN</h3><span class="badge">EXTRAIT</span></div>
+          <div class="tbar" role="slider" tabindex="0" aria-label="Position de lecture" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
+          <div class="ttime"><span class="cur">0:00</span><span class="dur">0:30</span></div>
+        </div>
+        <div class="teq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </article>
+      <article class="track reveal" data-src="audio/noircit.mp3">
+        <button class="tplay" type="button" aria-label="Écouter l'extrait"><span class="ico"></span></button>
+        <div class="tbody">
+          <div class="tmeta"><h3>NOIRCIT</h3><span class="badge">EXTRAIT</span></div>
+          <div class="tbar" role="slider" tabindex="0" aria-label="Position de lecture" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
+          <div class="ttime"><span class="cur">0:00</span><span class="dur">0:30</span></div>
+        </div>
+        <div class="teq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </article>
+      <article class="track reveal" data-src="audio/nebula.mp3">
+        <button class="tplay" type="button" aria-label="Écouter l'extrait"><span class="ico"></span></button>
+        <div class="tbody">
+          <div class="tmeta"><h3>NEBULA</h3><span class="badge">EXTRAIT</span></div>
+          <div class="tbar" role="slider" tabindex="0" aria-label="Position de lecture" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
+          <div class="ttime"><span class="cur">0:00</span><span class="dur">0:30</span></div>
+        </div>
+        <div class="teq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSUS -->
+<section id="processus">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Comment ça se passe</div>
+      <h2 class="title chrome-text">DE L'IDÉE À LA SORTIE</h2>
+      <p class="lead">Un parcours simple en quatre étapes pour transformer ton projet en morceau prêt à être écouté.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="num">01</div><h3>BRIEF</h3><p>Tu nous présentes ton projet et tes envies via le formulaire de réservation.</p></div>
+      <div class="step reveal"><div class="num">02</div><h3>SESSION</h3><p>Enregistrement de tes voix en studio, dans une ambiance travaillée pour libérer ton potentiel.</p></div>
+      <div class="step reveal"><div class="num">03</div><h3>MIX & MASTER</h3><p>Équilibre, traitement et finalisation pour un rendu pro sur toutes les plateformes.</p></div>
+      <div class="step reveal"><div class="num">04</div><h3>SORTIE</h3><p>Préparation de ton single ou EP et accompagnement jusqu'à la sortie officielle.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TARIFS -->
+<section id="tarifs" style="background:var(--bg2)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Investis dans ton son</div>
+      <h2 class="title chrome-text">TARIFS</h2>
+      <p class="lead">Chaque projet est unique : nous établissons un devis adapté à tes besoins.</p>
+    </div>
+    <div class="pricing">
+      <div class="price reveal"><h3>ENREGISTREMENT STUDIO</h3><div class="amount">SUR DEVIS</div><p>Session de prise de voix en studio.</p><a href="#contact" class="btn btn-ghost" data-service="Enregistrement">DEMANDER UN DEVIS</a></div>
+      <div class="price reveal"><h3>MIXAGE</h3><div class="amount">SUR DEVIS</div><p>Mixage professionnel de tes morceaux.</p><a href="#contact" class="btn btn-ghost" data-service="Mixage">DEMANDER UN DEVIS</a></div>
+      <div class="price reveal"><h3>MASTERING</h3><div class="amount">SUR DEVIS</div><p>Finalisation prête pour le streaming.</p><a href="#contact" class="btn btn-ghost" data-service="Mastering">DEMANDER UN DEVIS</a></div>
+      <div class="price featured reveal"><h3>PACK COMPLET</h3><div class="amount">SUR DEVIS</div><p>Enregistrement + mixage + mastering.</p><a href="#contact" class="btn btn-primary" data-service="Pack complet">DEMANDER UN DEVIS</a></div>
+      <div class="price reveal"><h3>PRODUCTION MUSICALE</h3><div class="amount">SUR DEVIS</div><p>Création d'instrumentales et direction musicale.</p><a href="#contact" class="btn btn-ghost" data-service="Production">DEMANDER UN DEVIS</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="background:var(--bg)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Tu te poses des questions ?</div>
+      <h2 class="title chrome-text">QUESTIONS FRÉQUENTES</h2>
+    </div>
+    <div class="faq reveal" id="faqList"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:var(--bg2)">
+  <div class="container contact-grid">
+    <div class="info reveal">
+      <div class="eyebrow">Passons à l'action</div>
+      <h2 class="title chrome-text">RÉSERVATION<br>& CONTACT</h2>
+      <p class="lead">Raconte-nous ton projet et choisis ta date. On te répond rapidement.</p>
+      <a class="row" id="mailLink" href="mailto:admin@nexosound.fr"><span class="ic">@</span><span id="mailText">admin@nexosound.fr</span></a>
+      <a class="row" href="https://www.instagram.com/" target="_blank" rel="noopener" id="lnkIg"><span class="ic">IG</span>Instagram</a>
+      <a class="row" href="https://www.tiktok.com/" target="_blank" rel="noopener" id="lnkTt"><span class="ic">TT</span>TikTok</a>
+      <a class="row" href="https://www.youtube.com/" target="_blank" rel="noopener" id="lnkYt"><span class="ic">YT</span>YouTube</a>
+    </div>
+    <div class="reveal">
+      <form id="form" novalidate>
+        <div id="formFields">
+          <div class="fgrid">
+            <div class="field"><label for="nom">NOM ET PRÉNOM *</label><input id="nom" name="nom" required autocomplete="name"></div>
+            <div class="field"><label for="artiste">NOM D'ARTISTE</label><input id="artiste" name="artiste"></div>
+            <div class="field"><label for="email">ADRESSE E-MAIL *</label><input id="email" name="email" type="email" inputmode="email" required autocomplete="email"></div>
+            <div class="field"><label for="tel">TÉLÉPHONE</label><input id="tel" name="telephone" type="tel" inputmode="tel" autocomplete="tel"></div>
+            <div class="field"><label for="service">SERVICE SOUHAITÉ *</label>
+              <select id="service" name="service" required>
+                <option value="">Choisir…</option>
+                <option>Enregistrement</option><option>Mixage</option><option>Mastering</option>
+                <option>Pack complet</option><option>Production</option><option>Accompagnement artistique</option>
+              </select></div>
+            <div class="field"><label for="date">DATE SOUHAITÉE</label><input id="date" name="date" type="date"></div>
+            <div class="field full"><label for="msg">MESSAGE OU DESCRIPTION DU PROJET *</label><textarea id="msg" name="message" required maxlength="1500"></textarea><div class="counter"><span id="cnt">0</span>/1500</div></div>
+            <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          </div>
+          <button class="btn btn-primary" type="submit" id="submitBtn">ENVOYER MA DEMANDE</button>
+          <p class="err" id="err" role="alert"></p>
+        </div>
+        <div class="confirm" id="confirm" role="status">
+          <div class="check">✓</div>
+          <h3 class="chrome-text">DEMANDE ENVOYÉE</h3>
+          <p style="color:var(--muted)">Merci ! Ta demande a bien été prise en compte. L'équipe NEXØ SOUND te recontacte très vite.</p>
+          <button type="button" class="btn btn-ghost again" id="again">NOUVELLE DEMANDE</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="logo chrome-text">NEXØ SOUND</div>
+    <div class="rmm">RECORD • MIX • MASTER</div>
+    <p class="sig">« NEXØ SOUND À LA PROD ! »</p>
+    <div class="fnav">
+      <a href="#services">SERVICES</a><a href="#label">LABEL</a><a href="#prods">PRODS</a><a href="#processus">PROCESSUS</a><a href="#tarifs">TARIFS</a><a href="#faq">FAQ</a><a href="#contact">CONTACT</a>
+    </div>
+    <div class="legal">
+      <button type="button" data-modal="m-legal">Mentions légales</button>
+      <button type="button" data-modal="m-priv">Politique de confidentialité</button>
+      <button type="button" id="openAdmin">Espace admin</button>
+    </div>
+    <p class="copy">© <span id="year"></span> NEXØ SOUND. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="Retour en haut" type="button">↑</button>
+<div id="stickyCta"><a href="#contact" class="btn btn-primary">RÉSERVER UNE SESSION</a></div>
+
+<dialog id="m-legal">
+  <h3>MENTIONS LÉGALES</h3>
+  <p><strong>Éditeur :</strong> NEXØ SOUND – [raison sociale / nom de l'entrepreneur] – [adresse] – SIRET : [à renseigner]</p>
+  <p><strong>Contact :</strong> <span class="mail-ref">admin@nexosound.fr</span></p>
+  <p><strong>Directeur de la publication :</strong> [à renseigner]</p>
+  <p><strong>Hébergeur :</strong> [nom et adresse de l'hébergeur]</p>
+  <p><strong>Propriété intellectuelle :</strong> L'ensemble des contenus (logo, textes, visuels) est la propriété de NEXØ SOUND. Toute reproduction sans autorisation est interdite.</p>
+  <button class="btn btn-primary" data-close type="button">FERMER</button>
+</dialog>
+<dialog id="m-priv">
+  <h3>POLITIQUE DE CONFIDENTIALITÉ</h3>
+  <p>Les données saisies dans le formulaire (nom, e-mail, téléphone, description du projet) sont utilisées uniquement pour répondre à ta demande de session ou de devis.</p>
+  <p>Elles ne sont ni vendues ni cédées à des tiers et sont conservées le temps nécessaire au traitement de ta demande.</p>
+  <p>Conformément au RGPD, tu disposes d'un droit d'accès, de rectification et de suppression : écris-nous à <span class="mail-ref">admin@nexosound.fr</span>.</p>
+  <button class="btn btn-primary" data-close type="button">FERMER</button>
+</dialog>
+
+<!-- ESPACE ADMIN : page de connexion -->
+<div id="loginPage" role="dialog" aria-modal="true" aria-labelledby="lgTitle">
+  <form id="loginForm" class="lp-card" novalidate>
+    <div class="logo chrome-text">NEXØ SOUND</div>
+    <h2 id="lgTitle">ESPACE ADMIN</h2>
+    <p class="sub">Connecte-toi pour modifier le site directement.</p>
+    <div class="field"><label for="lgUser">NOM D'UTILISATEUR</label><input id="lgUser" name="username" autocomplete="username" autocapitalize="none" spellcheck="false"></div>
+    <div class="field"><label for="lgPass">MOT DE PASSE</label>
+      <div class="pw"><input id="lgPass" name="password" type="password" autocomplete="current-password"><button type="button" id="lgEye" aria-label="Afficher le mot de passe">👁</button></div></div>
+    <p class="err" id="lgErr" role="alert"></p>
+    <button class="btn btn-primary" type="submit" id="lgSubmit">SE CONNECTER</button>
+    <button type="button" class="back" id="lgBack">← Retour au site</button>
+  </form>
+</div>
+
+<!-- ESPACE ADMIN : barre d'outils + panneau -->
+<div id="adminBar" hidden>
+  <span class="ab-tag">ADMIN</span>
+  <button type="button" id="abEdit">✎ ÉDITION</button>
+  <button type="button" id="abPanel">⚙ RÉGLAGES</button>
+  <button type="button" id="abPublish">⬇ PUBLIER</button>
+  <span id="abStatus"></span>
+  <button type="button" id="abOut" aria-label="Se déconnecter">⏻</button>
+</div>
+<aside id="adminPanel" aria-label="Réglages du site">
+  <div class="ph"><h3>RÉGLAGES DU SITE</h3><button type="button" class="mini" id="pClose">FERMER ✕</button></div>
+  <p class="hint">Pour modifier un texte : active « Édition » puis clique directement dessus sur la page.</p>
+  <h3>COORDONNÉES & LIENS</h3>
+  <div class="field"><label for="pEmail">E-MAIL PROFESSIONNEL</label><input id="pEmail" type="email" inputmode="email"></div>
+  <div class="field"><label for="pIg">LIEN INSTAGRAM</label><input id="pIg" type="url" inputmode="url" placeholder="https://www.instagram.com/…"></div>
+  <div class="field"><label for="pTt">LIEN TIKTOK</label><input id="pTt" type="url" inputmode="url" placeholder="https://www.tiktok.com/@…"></div>
+  <div class="field"><label for="pYt">LIEN YOUTUBE</label><input id="pYt" type="url" inputmode="url" placeholder="https://www.youtube.com/@…"></div>
+  <div class="field"><label for="pForm">LIEN DU FORMULAIRE (FORMSPREE)</label><input id="pForm" type="url" inputmode="url" placeholder="https://formspree.io/f/…"></div>
+  <h3>SECTIONS AFFICHÉES</h3>
+  <div id="pSections"></div>
+  <h3>QUESTIONS FRÉQUENTES</h3>
+  <div id="pFaq"></div>
+  <button type="button" class="mini" id="pFaqAdd">+ AJOUTER UNE QUESTION</button>
+  <h3>PUBLICATION</h3>
+  <p class="hint">Tes modifications sont enregistrées automatiquement dans ce navigateur. Pour les rendre visibles par tout le monde, télécharge le nouvel index.html et remplace l'ancien sur ton hébergement.</p>
+  <button class="btn btn-primary" id="pDownload" type="button">TÉLÉCHARGER INDEX.HTML</button>
+  <button class="mini danger" id="pReset" type="button" style="margin-top:16px">ANNULER TOUTES MES MODIFICATIONS</button>
+</aside>
+<div id="toast" role="status"></div>
+
+<script id="siteData" type="application/json">{}</script>
+<script>
+const SOURCE = '<!DOCTYPE html>\n' + document.documentElement.outerHTML; // copie d'origine, utilisée pour « Publier »
+/* ============ CONFIGURATION (à modifier) ============ */
+const CONFIG = {
+  email: "admin@nexosound.fr",
+  formEndpoint: "https://formspree.io/f/xeaarprl",
+  instagram: "https://www.instagram.com/",
+  tiktok: "https://www.tiktok.com/",
+  youtube: "https://www.youtube.com/"
+};
+
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ============ Liens ============ */
+function applyLinks(){
+  $('#mailLink').href = "mailto:" + CONFIG.email;
+  $('#mailText').textContent = CONFIG.email;
+  $$('.mail-ref').forEach(e => e.textContent = CONFIG.email);
+  $('#lnkIg').href = CONFIG.instagram;
+  $('#lnkTt').href = CONFIG.tiktok;
+  $('#lnkYt').href = CONFIG.youtube;
+}
+applyLinks();
+$('#year').textContent = new Date().getFullYear();
+
+/* ============ Preloader ============ */
+const loader = $('#loader');
+const hideLoader = () => loader.classList.add('done');
+addEventListener('load', () => setTimeout(hideLoader, 350));
+setTimeout(hideLoader, 2500);
+
+/* ============ Égaliseur ============ */
+const eq = $('#eq');
+for (let i = 0; i < 44; i++) {
+  const b = document.createElement('i');
+  b.style.animationDuration = (0.5 + Math.random() * 0.9).toFixed(2) + 's';
+  b.style.animationDelay = (-Math.random() * 1.5).toFixed(2) + 's';
+  eq.appendChild(b);
+}
+
+/* ============ Particules ============ */
+(function(){
+  const c = $('#particles'), ctx = c.getContext('2d');
+  let w, h, pts = [], running = true;
+  const resize = () => { w = c.width = c.offsetWidth; h = c.height = c.offsetHeight;
+    pts = Array.from({length: Math.min(70, Math.floor(w/22))}, () => ({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.8+.4,v:Math.random()*.4+.1,a:Math.random()})); };
+  resize(); addEventListener('resize', resize);
+  if (reduceMotion) return;
+  new IntersectionObserver(e => running = e[0].isIntersecting).observe(c);
+  (function draw(){
+    if (running) {
+      ctx.clearRect(0,0,w,h);
+      pts.forEach(p => { p.y -= p.v; p.a += .01; if (p.y < -5) { p.y = h + 5; p.x = Math.random()*w; }
+        ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,6.283);
+        ctx.fillStyle = `rgba(190,130,255,${.25 + Math.sin(p.a)*.25})`; ctx.shadowColor = '#a24bff'; ctx.shadowBlur = 10; ctx.fill(); });
+    }
+    requestAnimationFrame(draw);
+  })();
+})();
+
+/* ============ Nav / menu mobile ============ */
+const nav = $('#nav'), burger = $('#burger'), menu = $('#menu');
+const setMenu = open => {
+  burger.classList.toggle('open', open); menu.classList.toggle('open', open);
+  burger.setAttribute('aria-expanded', open); document.body.classList.toggle('lock', open);
+};
+burger.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+addEventListener('resize', () => { if (innerWidth > 1020) setMenu(false); });
+document.addEventListener('click', e => { if (menu.classList.contains('open') && !menu.contains(e.target) && !burger.contains(e.target)) setMenu(false); });
+
+const links = $$('#menu a');
+const secObs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) {
+  links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id)); } }), {rootMargin:'-50% 0px -50% 0px'});
+links.forEach(l => { const s = $(l.getAttribute('href')); if (s) secObs.observe(s); });
+
+/* ============ Scroll : progression, nav, retour haut, CTA mobile ============ */
+const progress = $('#progress'), toTop = $('#toTop'), sticky = $('#stickyCta'), contact = $('#contact');
+let ticking = false;
+function onScroll(){
+  const y = scrollY, max = document.documentElement.scrollHeight - innerHeight;
+  progress.style.width = (max > 0 ? y / max * 100 : 0) + '%';
+  nav.classList.toggle('scrolled', y > 40);
+  toTop.classList.toggle('show', y > 700);
+  const r = contact.getBoundingClientRect();
+  const inContact = r.top < innerHeight * .6 && r.bottom > 0;
+  sticky.classList.toggle('show', y > innerHeight * .7 && !inContact);
+  ticking = false;
+}
+addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, {passive:true});
+addEventListener('resize', onScroll); onScroll();
+toTop.addEventListener('click', () => scrollTo({top:0, behavior: reduceMotion ? 'auto' : 'smooth'}));
+
+/* ============ Lueur suivant la souris (écrans avec souris) ============ */
+if (matchMedia('(hover:hover) and (pointer:fine)').matches && !reduceMotion) {
+  const g = $('#cursorGlow');
+  addEventListener('mousemove', e => { g.style.opacity = 1; g.style.transform = `translate(${e.clientX}px,${e.clientY}px)`; }, {passive:true});
+  document.addEventListener('mouseleave', () => g.style.opacity = 0);
+}
+
+/* ============ Révélation au scroll ============ */
+const revObs = new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); o.unobserve(e.target); } }), {threshold:.1, rootMargin:'0px 0px -30px 0px'});
+$$('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 5) * 80 + 'ms'; revObs.observe(el); });
+
+/* ============ FAQ (générée depuis la liste, modifiable dans l'espace admin) ============ */
+const DEFAULT_FAQ = [
+  {q:"Comment réserver une session ?", a:"Remplis le formulaire de la section Contact : choisis le service, indique ta date souhaitée et décris ton projet. Nous te recontactons pour confirmer les détails."},
+  {q:"Pour quels types d'artistes ?", a:"NEXØ SOUND accueille les chanteurs et les rappeurs pour l'enregistrement de leurs voix, ainsi que les artistes qui souhaitent être accompagnés sur l'ensemble de leur projet."},
+  {q:"Comment sont calculés les tarifs ?", a:"Chaque projet est différent. Les tarifs sont donc établis sur devis, selon les services choisis et l'ampleur du projet. Utilise le bouton « Demander un devis » pour en recevoir un."},
+  {q:"Accompagnez-vous la sortie des morceaux ?", a:"Oui. Nous t'accompagnons de la première prise de voix jusqu'à la sortie officielle : préparation des singles et EP, distribution musicale et développement de ton image artistique."},
+  {q:"J'ai déjà une instru ou un projet commencé, c'est possible ?", a:"Précise-le dans la description de ton projet au moment de ta demande : nous étudions chaque situation au cas par cas pour te proposer la meilleure approche."}
+];
+function renderFaq(list){
+  const box = $('#faqList'); box.innerHTML = '';
+  list.forEach(it => {
+    const qa = document.createElement('div'); qa.className = 'qa';
+    const btn = document.createElement('button'); btn.type = 'button'; btn.setAttribute('aria-expanded', 'false'); btn.textContent = it.q;
+    const ans = document.createElement('div'); ans.className = 'ans';
+    const p = document.createElement('p'); p.textContent = it.a; ans.appendChild(p);
+    qa.append(btn, ans); box.appendChild(qa);
+    btn.addEventListener('click', () => {
+      const open = !qa.classList.contains('open');
+      $$('.qa.open').forEach(o => { if (o !== qa) { o.classList.remove('open'); o.querySelector('.ans').style.maxHeight = 0; o.querySelector('button').setAttribute('aria-expanded', false); } });
+      qa.classList.toggle('open', open); btn.setAttribute('aria-expanded', open);
+      ans.style.maxHeight = open ? ans.scrollHeight + 'px' : 0;
+    });
+  });
+}
+
+/* ============ Tarifs -> présélection du service ============ */
+$$('[data-service]').forEach(b => b.addEventListener('click', () => { $('#service').value = b.dataset.service; }));
+
+/* ============ Formulaire ============ */
+const form = $('#form'), err = $('#err'), btn = $('#submitBtn'), msg = $('#msg');
+const dateInput = $('#date');
+dateInput.min = new Date(Date.now() - new Date().getTimezoneOffset()*60000).toISOString().split('T')[0];
+msg.addEventListener('input', () => $('#cnt').textContent = msg.value.length);
+$$('#form input, #form select, #form textarea').forEach(el => el.addEventListener('input', () => el.classList.remove('bad')));
+
+const showErr = t => { err.textContent = t; err.style.display = 'block'; };
+const done = () => { $('#formFields').style.display = 'none'; $('#confirm').classList.add('show'); };
+
+form.addEventListener('submit', async e => {
+  e.preventDefault(); err.style.display = 'none';
+  const f = new FormData(form);
+  if (f.get('website')) return; // anti-spam (honeypot)
+  let bad = false;
+  ['nom','email','service','message'].forEach(k => {
+    const el = form.elements[k], ok = String(f.get(k) || '').trim() && (k !== 'email' || /^\S+@\S+\.\S+$/.test(f.get(k)));
+    el.classList.toggle('bad', !ok); if (!ok) bad = true;
+  });
+  if (bad) { showErr("Merci de remplir les champs obligatoires (*) avec une adresse e-mail valide."); form.querySelector('.bad')?.focus(); return; }
+  if (CONFIG.formEndpoint) {
+    const label = btn.textContent; btn.disabled = true; btn.textContent = 'ENVOI EN COURS…';
+    try {
+      const r = await fetch(CONFIG.formEndpoint, {method:'POST', body:f, headers:{'Accept':'application/json'}});
+      if (!r.ok) throw 0;
+      form.reset(); $('#cnt').textContent = 0; done();
+    } catch { showErr("L'envoi a échoué. Réessaie ou écris-nous à " + CONFIG.email); }
+    btn.disabled = false; btn.textContent = label;
+  } else {
+    const body = `Nom : ${f.get('nom')}\nNom d'artiste : ${f.get('artiste')}\nE-mail : ${f.get('email')}\nTéléphone : ${f.get('telephone')}\nService : ${f.get('service')}\nDate souhaitée : ${f.get('date')}\n\nMessage :\n${f.get('message')}`;
+    location.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent('Demande NEXØ SOUND – ' + f.get('service'))}&body=${encodeURIComponent(body)}`;
+    done();
+  }
+});
+$('#again').addEventListener('click', () => { $('#confirm').classList.remove('show'); $('#formFields').style.display = ''; });
+
+/* ============ Lecteur d'extraits ============ */
+(function(){
+  const tracks = $$('.track'); if (!tracks.length) return;
+  const audio = new Audio(); audio.preload = 'none';
+  const fmt = s => { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s/60) + ':' + String(s%60).padStart(2,'0'); };
+  let cur = null;
+  const ui = t => ({fill:t.querySelector('.tbar i'), bar:t.querySelector('.tbar'), c:t.querySelector('.cur'), d:t.querySelector('.dur'), b:t.querySelector('.tplay')});
+  function setState(t, on){
+    const u = ui(t); t.classList.toggle('playing', on);
+    u.b.setAttribute('aria-label', (on ? 'Mettre en pause : ' : 'Écouter l\'extrait : ') + t.querySelector('h3').textContent.trim());
+  }
+  function resetUi(t){ const u = ui(t); u.fill.style.width = '0'; u.c.textContent = '0:00'; u.bar.setAttribute('aria-valuenow', 0); setState(t, false); }
+  tracks.forEach(t => {
+    const u = ui(t);
+    setState(t, false);
+    u.b.addEventListener('click', () => {
+      if (cur === t) { audio.paused ? audio.play().catch(() => {}) : audio.pause(); return; }
+      if (cur) resetUi(cur);
+      cur = t; audio.src = t.dataset.src; audio.currentTime = 0;
+      audio.play().catch(() => { setState(t, false); });
+    });
+    const seek = x => { if (cur !== t || !audio.duration) return; const r = u.bar.getBoundingClientRect(); audio.currentTime = Math.min(1, Math.max(0, (x - r.left) / r.width)) * audio.duration; };
+    u.bar.addEventListener('click', e => seek(e.clientX));
+    u.bar.addEventListener('keydown', e => {
+      if (cur !== t || !audio.duration) return;
+      if (e.key === 'ArrowRight') { audio.currentTime = Math.min(audio.duration, audio.currentTime + 5); e.preventDefault(); }
+      if (e.key === 'ArrowLeft') { audio.currentTime = Math.max(0, audio.currentTime - 5); e.preventDefault(); }
+    });
+  });
+  audio.addEventListener('play', () => cur && setState(cur, true));
+  audio.addEventListener('pause', () => cur && setState(cur, false));
+  audio.addEventListener('ended', () => { if (cur) resetUi(cur); });
+  audio.addEventListener('loadedmetadata', () => { if (cur) ui(cur).d.textContent = fmt(audio.duration); });
+  audio.addEventListener('timeupdate', () => {
+    if (!cur || !audio.duration) return; const u = ui(cur), p = audio.currentTime / audio.duration * 100;
+    u.fill.style.width = p + '%'; u.c.textContent = fmt(audio.currentTime); u.bar.setAttribute('aria-valuenow', Math.round(p));
+  });
+  audio.addEventListener('error', () => { if (cur) { setState(cur, false); ui(cur).d.textContent = 'Fichier audio introuvable'; } });
+})();
+
+/* ============ Modales ============ */
+$$('[data-modal]').forEach(b => b.addEventListener('click', () => $('#' + b.dataset.modal).showModal()));
+$$('dialog').forEach(d => {
+  d.querySelector('[data-close]').addEventListener('click', () => d.close());
+  d.addEventListener('click', e => { if (e.target === d) d.close(); });
+});
+
+/* =====================================================================
+   ESPACE ADMIN : connexion + modification du site directement dans la page
+   ===================================================================== */
+const AUTH_HASH = 'd8babfe738a5ecda43fbfde1ceb03051af042b34191e5a601a735b842a300439'; // SHA-256 de « NXS|identifiant|mot de passe »
+const SESS_KEY = 'nxs_sess', DRAFT_KEY = 'nxs_draft', LOCK_KEY = 'nxs_lock';
+const SECTIONS = {services:'Services', label:'Label', prods:'Prods', processus:'Processus', tarifs:'Tarifs', faq:'FAQ'};
+const EDIT_SEL = ['#accueil .sub-chrome','#accueil .tagline','.eyebrow','h2.title','.section-head .lead','#label .lead','#contact .lead','.quote',
+  '.service h3','.service p','.pillar span','.track h3','.step h3','.step p','.price h3','.price .amount','.price p','footer .rmm','footer .sig'].join(',');
+
+/* SHA-256 (fonctionne aussi hors HTTPS) */
+function sha256js(str){
+  const rr = (v,n) => (v>>>n)|(v<<(32-n));
+  const msg = new TextEncoder().encode(str), K = [], H = [];
+  const isPrime = n => { for (let i = 2; i*i <= n; i++) if (n % i === 0) return false; return true; };
+  for (let n = 2, c = 0; c < 64; n++) if (isPrime(n)) { if (c < 8) H[c] = (Math.pow(n,.5)%1)*4294967296|0; K[c] = (Math.cbrt(n)%1)*4294967296|0; c++; }
+  const l = msg.length, bits = l*8, padLen = ((l+9+63)>>6)<<6;
+  const buf = new Uint8Array(padLen); buf.set(msg); buf[l] = 0x80;
+  const dv = new DataView(buf.buffer); dv.setUint32(padLen-8, Math.floor(bits/4294967296)); dv.setUint32(padLen-4, bits>>>0);
+  const w = new Int32Array(64); let hh = H.slice();
+  for (let off = 0; off < padLen; off += 64) {
+    for (let i = 0; i < 16; i++) w[i] = dv.getInt32(off+i*4);
+    for (let i = 16; i < 64; i++) { const x = w[i-15], y = w[i-2]; w[i] = (w[i-16]+(rr(x,7)^rr(x,18)^(x>>>3))+w[i-7]+(rr(y,17)^rr(y,19)^(y>>>10)))|0; }
+    let [A,B,C,D,E,F,G,Hh] = hh;
+    for (let i = 0; i < 64; i++) {
+      const t1 = (Hh+(rr(E,6)^rr(E,11)^rr(E,25))+((E&F)^(~E&G))+K[i]+w[i])|0;
+      const t2 = ((rr(A,2)^rr(A,13)^rr(A,22))+((A&B)^(A&C)^(B&C)))|0;
+      Hh=G; G=F; F=E; E=(D+t1)|0; D=C; C=B; B=A; A=(t1+t2)|0;
+    }
+    hh = [hh[0]+A|0,hh[1]+B|0,hh[2]+C|0,hh[3]+D|0,hh[4]+E|0,hh[5]+F|0,hh[6]+G|0,hh[7]+Hh|0];
+  }
+  return hh.map(x => (x>>>0).toString(16).padStart(8,'0')).join('');
+}
+
+/* ---------- Données du site (contenu modifiable) ---------- */
+const escHtml = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const cleanHtml = s => String(s).replace(/<br\s*\/?>/gi,'\u0001').replace(/</g,'&lt;').replace(/\u0001/g,'<br>').replace(/(<br>)+$/,'');
+function toSafe(node){
+  let out = '';
+  node.childNodes.forEach(n => {
+    if (n.nodeType === 3) out += escHtml(n.nodeValue);
+    else if (n.nodeName === 'BR') out += '<br>';
+    else if (n.nodeType === 1) out += toSafe(n);
+  });
+  return out;
+}
+function cleanSettings(s){
+  const o = {}; if (!s || typeof s !== 'object') return o;
+  if (typeof s.email === 'string' && /^[^\s@<>"']+@[^\s@<>"']+\.[^\s@<>"']+$/.test(s.email.trim())) o.email = s.email.trim();
+  ['instagram','tiktok','youtube','formEndpoint'].forEach(k => {
+    if (typeof s[k] !== 'string') return; const v = s[k].trim();
+    if (/^https?:\/\/[^\s<>"']+$/i.test(v) || (k === 'formEndpoint' && v === '')) o[k] = v;
+  });
+  return o;
+}
+function cleanData(raw){
+  raw = raw && typeof raw === 'object' ? raw : {};
+  const d = {texts:{}, settings:cleanSettings(raw.settings), hidden:[], faq:DEFAULT_FAQ.map(x => ({...x})), publishedAt:+raw.publishedAt||0, savedAt:+raw.savedAt||0};
+  if (raw.texts && typeof raw.texts === 'object') for (const k in raw.texts) if (/^t\d+$/.test(k) && typeof raw.texts[k] === 'string') d.texts[k] = cleanHtml(raw.texts[k]);
+  if (Array.isArray(raw.hidden)) d.hidden = raw.hidden.filter(x => x in SECTIONS);
+  if (Array.isArray(raw.faq)) d.faq = raw.faq.filter(x => x && typeof x.q === 'string' && typeof x.a === 'string').slice(0,30).map(x => ({q:x.q.slice(0,300), a:x.a.slice(0,2000)}));
+  return d;
+}
+let PUBLISHED = {}; try { PUBLISHED = JSON.parse($('#siteData').textContent) || {}; } catch (e) {}
+const isAdmin = () => { try { return +sessionStorage.getItem(SESS_KEY) > Date.now(); } catch (e) { return false; } };
+const readDraft = () => { try { return JSON.parse(localStorage.getItem(DRAFT_KEY)); } catch (e) { return null; } };
+function buildData(admin){
+  const pub = cleanData(PUBLISHED);
+  if (admin) { const dr = readDraft(); if (dr) { const d = cleanData(dr); if (d.savedAt > pub.publishedAt) return d; } }
+  return pub;
+}
+
+const EDITABLE = $$(EDIT_SEL);
+EDITABLE.forEach((el, i) => el.dataset.ek = 't' + i);
+
+function applyHidden(list){
+  Object.keys(SECTIONS).forEach(id => {
+    const hide = list.includes(id), sec = document.getElementById(id);
+    if (sec) sec.style.display = hide ? 'none' : '';
+    $$('a[href="#' + id + '"]').forEach(a => { (a.closest('li') || a).style.display = hide ? 'none' : ''; });
+  });
+}
+function applyData(d){
+  EDITABLE.forEach(el => { const v = d.texts[el.dataset.ek]; if (v != null) el.innerHTML = v; });
+  Object.assign(CONFIG, d.settings); applyLinks();
+  applyHidden(d.hidden); renderFaq(d.faq);
+}
+let DATA = buildData(isAdmin());
+applyData(DATA);
+
+/* ---------- Toast + état ---------- */
+let toastTimer;
+function toast(t){ const el = $('#toast'); el.textContent = t; el.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('show'), 4500); }
+const setStatus = t => { $('#abStatus').textContent = t; };
+function saveDraft(){
+  DATA.savedAt = Date.now();
+  try { localStorage.setItem(DRAFT_KEY, JSON.stringify(DATA)); setStatus('✓ Brouillon enregistré'); } catch (e) { setStatus('⚠ Enregistrement impossible'); }
+}
+let saveTimer; const queueSave = () => { setStatus('…'); clearTimeout(saveTimer); saveTimer = setTimeout(saveDraft, 400); };
+
+/* ---------- Édition directe des textes ---------- */
+const editing = () => document.body.classList.contains('editing');
+function setEditing(on){
+  document.body.classList.toggle('editing', on);
+  EDITABLE.forEach(el => on ? el.setAttribute('contenteditable', 'true') : el.removeAttribute('contenteditable'));
+  $('#abEdit').classList.toggle('on', on);
+}
+EDITABLE.forEach(el => {
+  el.addEventListener('input', () => { if (!editing()) return; DATA.texts[el.dataset.ek] = cleanHtml(toSafe(el)); queueSave(); });
+  el.addEventListener('keydown', e => { if (editing() && e.key === 'Enter') { e.preventDefault(); document.execCommand('insertLineBreak'); } });
+  el.addEventListener('paste', e => { if (!editing()) return; e.preventDefault(); document.execCommand('insertText', false, (e.clipboardData || window.clipboardData).getData('text/plain')); });
+});
+$('#abEdit').addEventListener('click', () => setEditing(!editing()));
+
+/* ---------- Panneau de réglages ---------- */
+const panel = $('#adminPanel');
+const openPanel = () => { panel.classList.add('open'); };
+const closePanel = () => panel.classList.remove('open');
+$('#abPanel').addEventListener('click', () => panel.classList.toggle('open'));
+$('#pClose').addEventListener('click', closePanel);
+
+const SET_MAP = {pEmail:'email', pIg:'instagram', pTt:'tiktok', pYt:'youtube', pForm:'formEndpoint'};
+Object.keys(SET_MAP).forEach(id => {
+  const inp = $('#' + id), k = SET_MAP[id];
+  inp.addEventListener('input', () => {
+    const c = cleanSettings({[k]: inp.value});
+    if (k in c) { inp.classList.remove('bad'); DATA.settings[k] = c[k]; CONFIG[k] = c[k]; applyLinks(); saveDraft(); }
+    else inp.classList.add('bad');
+  });
+});
+function renderSections(){
+  const box = $('#pSections'); box.innerHTML = '';
+  Object.entries(SECTIONS).forEach(([id, name]) => {
+    const l = document.createElement('label'); l.className = 'chk';
+    const c = document.createElement('input'); c.type = 'checkbox'; c.checked = !DATA.hidden.includes(id);
+    c.addEventListener('change', () => { DATA.hidden = DATA.hidden.filter(x => x !== id); if (!c.checked) DATA.hidden.push(id); applyHidden(DATA.hidden); saveDraft(); });
+    l.append(c, document.createTextNode(name)); box.appendChild(l);
+  });
+}
+function renderFaqEditor(){
+  const box = $('#pFaq'); box.innerHTML = '';
+  DATA.faq.forEach((it, i) => {
+    const w = document.createElement('div'); w.className = 'fq';
+    const q = document.createElement('input'); q.value = it.q; q.placeholder = 'Question';
+    const a = document.createElement('textarea'); a.value = it.a; a.placeholder = 'Réponse';
+    const del = document.createElement('button'); del.type = 'button'; del.className = 'mini danger'; del.textContent = 'SUPPRIMER';
+    const upd = () => { DATA.faq[i] = {q:q.value.slice(0,300), a:a.value.slice(0,2000)}; renderFaq(DATA.faq); queueSave(); };
+    q.addEventListener('input', upd); a.addEventListener('input', upd);
+    del.addEventListener('click', () => { DATA.faq.splice(i, 1); renderFaq(DATA.faq); renderFaqEditor(); saveDraft(); });
+    w.append(q, a, del); box.appendChild(w);
+  });
+}
+$('#pFaqAdd').addEventListener('click', () => { DATA.faq.push({q:'Nouvelle question ?', a:'Ta réponse ici.'}); renderFaq(DATA.faq); renderFaqEditor(); saveDraft(); });
+function fillPanel(){
+  Object.keys(SET_MAP).forEach(id => { $('#' + id).value = CONFIG[SET_MAP[id]] || ''; $('#' + id).classList.remove('bad'); });
+  renderSections(); renderFaqEditor();
+}
+
+/* ---------- Publication : télécharge un index.html à jour ---------- */
+function buildExport(){
+  const out = Object.assign({}, DATA, {publishedAt: Date.now()}); delete out.savedAt;
+  const json = JSON.stringify(out).replace(/</g, '\\u003c');
+  return SOURCE.replace(/(<script id="siteData" type="application\/json">)[\s\S]*?(<\/script>)/, (m, a, b) => a + json + b);
+}
+function download(){
+  const blob = new Blob([buildExport()], {type:'text/html;charset=utf-8'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'index.html';
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 3000);
+  toast("index.html téléchargé : remplace l'ancien fichier sur ton hébergement pour publier.");
+}
+$('#abPublish').addEventListener('click', download);
+$('#pDownload').addEventListener('click', download);
+$('#pReset').addEventListener('click', () => {
+  if (!confirm('Annuler toutes tes modifications non publiées et revenir à la version publiée ?')) return;
+  try { localStorage.removeItem(DRAFT_KEY); } catch (e) {}
+  location.reload();
+});
+
+/* ---------- Entrée / sortie du mode admin ---------- */
+function enterAdmin(fresh){
+  document.body.classList.add('admin-on'); $('#adminBar').hidden = false;
+  fillPanel(); setEditing(true);
+  if (fresh) toast('Connecté. Mode édition activé : clique sur un texte pour le modifier.');
+}
+function logout(){
+  try { sessionStorage.removeItem(SESS_KEY); } catch (e) {}
+  history.replaceState(null, '', location.pathname + location.search);
+  location.reload();
+}
+$('#abOut').addEventListener('click', logout);
+
+/* ---------- Page de connexion ---------- */
+const lp = $('#loginPage'), lgSubmit = $('#lgSubmit'), lgErr = $('#lgErr');
+const showLgErr = t => { lgErr.textContent = t; lgErr.style.display = t ? 'block' : 'none'; };
+const getLock = () => { try { return JSON.parse(localStorage.getItem(LOCK_KEY)) || {n:0, until:0}; } catch (e) { return {n:0, until:0}; } };
+const setLock = o => { try { localStorage.setItem(LOCK_KEY, JSON.stringify(o)); } catch (e) {} };
+let lockTimer;
+function updateLockMsg(){
+  const l = getLock(), left = Math.ceil((l.until - Date.now()) / 1000);
+  clearTimeout(lockTimer);
+  if (left > 0) { showLgErr('Trop de tentatives. Réessaie dans ' + left + ' s.'); lgSubmit.disabled = true; lockTimer = setTimeout(updateLockMsg, 1000); }
+  else { lgSubmit.disabled = false; if (l.until) { setLock({n:0, until:0}); showLgErr(''); } }
+}
+function openLogin(){
+  if (isAdmin()) { openPanel(); return; }
+  lp.classList.add('open'); document.body.classList.add('lock'); updateLockMsg();
+  setTimeout(() => $('#lgUser').focus(), 60);
+}
+function closeLogin(){
+  lp.classList.remove('open'); document.body.classList.remove('lock');
+  if (location.hash === '#admin') history.replaceState(null, '', location.pathname + location.search);
+}
+$('#openAdmin').addEventListener('click', openLogin);
+$('#lgBack').addEventListener('click', closeLogin);
+$('#lgEye').addEventListener('click', () => { const p = $('#lgPass'); p.type = p.type === 'password' ? 'text' : 'password'; });
+addEventListener('keydown', e => { if (e.key === 'Escape') { if (lp.classList.contains('open')) closeLogin(); closePanel(); } });
+$('#loginForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  const l = getLock(); if (l.until > Date.now()) { updateLockMsg(); return; }
+  const user = $('#lgUser').value.trim().toLowerCase(), pass = $('#lgPass').value;
+  lgSubmit.disabled = true; showLgErr('');
+  await new Promise(r => setTimeout(r, 500));
+  if (sha256js('NXS|' + user + '|' + pass) === AUTH_HASH) {
+    setLock({n:0, until:0});
+    try { sessionStorage.setItem(SESS_KEY, String(Date.now() + 4*3600e3)); } catch (err) {}
+    $('#lgPass').value = ''; lgSubmit.disabled = false; closeLogin();
+    DATA = buildData(true); applyData(DATA); enterAdmin(true);
+  } else {
+    const n = l.n + 1; $('#lgPass').value = '';
+    if (n >= 5) { setLock({n:0, until:Date.now() + 60000}); updateLockMsg(); }
+    else { setLock({n, until:0}); showLgErr('Identifiant ou mot de passe incorrect.'); lgSubmit.disabled = false; $('#lgPass').focus(); }
+  }
+});
+if (isAdmin()) enterAdmin(false);
+if (location.hash === '#admin') openLogin();
+addEventListener('hashchange', () => { if (location.hash === '#admin') openLogin(); });
+</script>
+</body>
+</html>
